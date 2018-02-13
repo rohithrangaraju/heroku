@@ -20,11 +20,11 @@ from django.conf.urls import url
 from rest_framework.urlpatterns import format_suffix_patterns
 from companies import views
 urlpatterns = [
-    url(r'^admin/',admin.site.urls),
-    url(r'^subcategory/$',views.DisplayAllSubcategory.as_view()),
-    url(r'^subcategory/(?P<sub_category_id>\d+)/$',views.FetchSubcategoryDetails.as_view()),
-    url(r'^subcategory/(?P<sub_category_id>\d+)/sku/$',views.FetchAllSku.as_view()),
-    url(r'^subcategory/(?P<sub_category_id>\d+)/sku/(?P<sku_id>\d+)/$',views.FetchSkuDescription.as_view()),
+    url(r'^https://sainsburysapi.herokuapp.com//admin/',admin.site.urls),
+    url(r'^https://sainsburysapi.herokuapp.com//subcategory/$',views.DisplayAllSubcategory.as_view()),
+    url(r'^https://sainsburysapi.herokuapp.com//subcategory/(?P<sub_category_id>\d+)/$',views.FetchSubcategoryDetails.as_view()),
+    url(r'^https://sainsburysapi.herokuapp.com//subcategory/(?P<sub_category_id>\d+)/sku/$',views.FetchAllSku.as_view()),
+    url(r'^https://sainsburysapi.herokuapp.com//subcategory/(?P<sub_category_id>\d+)/sku/(?P<sku_id>\d+)/$',views.FetchSkuDescription.as_view()),
 ]
 urlpatterns = format_suffix_patterns(urlpatterns)
 
