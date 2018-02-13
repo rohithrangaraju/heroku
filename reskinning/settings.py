@@ -26,7 +26,7 @@ SECRET_KEY = 'y#i8m^!5#h!t%&tqjh)_a@^71z1bm)@^*$9&+n-l6#joqk+flr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.28.213', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['192.168.28.213', 'localhost', '127.0.0.1','https://sainsburysapi.herokuapp.com']
 
 
 # Application definition
@@ -82,7 +82,10 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
