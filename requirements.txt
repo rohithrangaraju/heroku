@@ -28,7 +28,7 @@ entrypoints==0.2.3
 enum34==1.1.6
 grpcio==1.8.1
 h5py==2.7.1
-html5lib==0.9999999
+html5lib==0.99999999
 httplib2==0.10.3
 idna==2.6
 image==1.5.17
